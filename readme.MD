@@ -3,6 +3,7 @@
 ###### These instructions are for attaching a Windows Node to an existing Kubernetes cluster running Flannel Network on vSphere ( although can be extended to other Infrastructure platforms
 
 Step1. Create a Kubernetes cluster with Linux node
+
 Step2. Add a Windows node to the cluster
 
 ## Kubeadm to deploy Kubernetes with a Linux Node on vSphere
