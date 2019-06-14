@@ -10,7 +10,8 @@
 	4. Install Docker
 		
 	5. Install Kubeadm
-  ``` apt-get update && apt-get install -y apt-transport-https curl```
+	
+  ```apt-get update && apt-get install -y apt-transport-https curl```
   
    ```curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - ```
    
@@ -22,18 +23,29 @@
    ```
         
 ```apt-get update```
+
 ```apt-get install -y kubelet kubeadm kubectl```
+
 ```apt-mark hold kubelet kubeadm kubectl```
+
 	6. Init Kubeadm
-		``` kubeadm init --pod-network-cidr=10.244.0.0/16
-    ```
+	
+```kubeadm init --pod-network-cidr=10.244.0.0/16```
+
+		
 	7. Configure kubectl
-		``` mkdir -p $HOME/.kube```
+	
+	``` mkdir -p $HOME/.kube```
+	
 ```sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config```
+
 ```sudo chown $(id -u):$(id -g) $HOME/.kube/config```
+
 	8. Install Pod-network ( I chose Flannel)
 		```sudo sysctl net.bridge.bridge-nf-call-iptables=1```
+		
 		```kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml```
+		
 		```Wget https://raw.githubusercontent.com/Microsoft/SDN/1d5c055bb195fecba07ad094d2d7c18c188f9d2d/Kubernetes/flannel/l2bridge/manifests/node-selector-patch.yml
     ```
     
