@@ -45,7 +45,7 @@ Step2. Add a Windows node to the cluster
 
 ```sudo chown $(id -u):$(id -g) $HOME/.kube/config```
 
-	8. Install Pod-network ( Have to choose Flannel for now as that is what the Windows suppoerts currently)
+	8. Install Pod-network ( Have to choose Flannel for now as that is what the Windows supports currently)
 	
 ```sudo sysctl net.bridge.bridge-nf-call-iptables=1```
 		
