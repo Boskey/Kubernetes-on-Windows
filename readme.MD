@@ -41,16 +41,16 @@
 
 ```sudo chown $(id -u):$(id -g) $HOME/.kube/config```
 
-	8. Install Pod-network ( I chose Flannel)
-		```sudo sysctl net.bridge.bridge-nf-call-iptables=1```
+	8. Install Pod-network ( Have to choose Flannel for now as that is what the Windows suppoerts currently)
+	
+```sudo sysctl net.bridge.bridge-nf-call-iptables=1```
 		
-		```kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml```
+```kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml```
 		
-		```Wget https://raw.githubusercontent.com/Microsoft/SDN/1d5c055bb195fecba07ad094d2d7c18c188f9d2d/Kubernetes/flannel/l2bridge/manifests/node-selector-patch.yml
+```Wget https://raw.githubusercontent.com/Microsoft/SDN/1d5c055bb195fecba07ad094d2d7c18c188f9d2d/Kubernetes/flannel/l2bridge/manifests/node-selector-patch.yml
     ```
     
-    
-		```kubectl patch ds/kube-flannel-ds-amd64 --patch "$(cat node-selector-patch.yml)" -n=kube-system```
+  ```kubectl patch ds/kube-flannel-ds-amd64 --patch "$(cat node-selector-patch.yml)" -n=kube-system```
 
 
 
