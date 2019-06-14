@@ -79,7 +79,9 @@ Install-Package -Name Docker -ProviderName DockerMsftProvider
 Start-Service docker
 ```
 4. Create a “Kubernetes for Windows” directory to store Kubernetes binaries as well as any deployment scripts and config files.
+
 ```mkdir c:\k```
+
 5.Copy the Kubernetes certificate file $HOME/.kube/config from the Linux controller to this new C:\k directory on your Windows node.
 
 6. Downlaod Kubernetes Binaries with Windows support ( link to v.1.14)
