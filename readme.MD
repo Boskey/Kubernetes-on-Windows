@@ -35,7 +35,7 @@
 		
 	7. Configure kubectl
 	
-	``` mkdir -p $HOME/.kube```
+```mkdir -p $HOME/.kube```
 	
 ```sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config```
 
