@@ -8,7 +8,7 @@ Step2. Add a Windows node to the cluster
 
 ## Kubeadm to deploy Kubernetes with a Linux Node on vSphere
 
-	1. Deployed a Ubuntu 16.0 + image
+	1. Deploy a Ubuntu 16.0 + image
 	2. Make sure the VM has 2 vCPU's and 2 GB Memory
 	3. run swapoff -a #This will immediately disable swap.
 	4. Install Docker
